@@ -53,4 +53,4 @@ if(Platform.OS === 'android'){
     return [enabled, requestResolutionSettings];
   };
 }
-export default LocationEnabler as LocationEnablerType | undefined;
+export default LocationEnabler as LocationEnablerType;
