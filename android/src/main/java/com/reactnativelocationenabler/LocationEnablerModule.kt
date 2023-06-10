@@ -22,7 +22,7 @@ class LocationEnablerModule(reactContext: ReactApplicationContext) : ReactContex
   init {
     val activityEventListener = object : BaseActivityEventListener() {
       override fun onActivityResult(activity: Activity, requestCode: Int, resultCode: Int, @Nullable intent: Intent?) {
-        if (intent !== null && requestCode != REQUEST_TURN_DEVICE_LOCATION_ON) return
+        if (requestCode != REQUEST_TURN_DEVICE_LOCATION_ON) return
         val result = Arguments.createMap()
         when (resultCode) {
           -1 -> result.putBoolean("locationEnabled", true)
